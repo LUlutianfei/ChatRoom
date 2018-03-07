@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html ng-app="techNodeApp">
+<head>
+	<meta charset="utf-8">
+	<title>TechNode</title>
+	<base href="/">
+	<link rel="stylesheet" type="text/css" href="/styles/room.css">
+	<link rel="stylesheet" type="text/css" href="/components/bootstrap/dist/css/bootstrap.css">
+	<!-- <script type="text/javascript" src="/components/jquery/dist/jquery.js"></script> -->
+	<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script type="text/javascript" src="/components/bootstrap/dist/js/bootstrap.js"></script>
+	<script src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>
+	 <script src="https://apps.bdimg.com/libs/angular-route/1.3.13/angular-route.js"></script>
+	 <script type="text/javascript" src="/socket.io/socket.io.js"></script>
+</head>
+<body>
+	<nav class="collapse nacbar-collapse" role="navigation">
+		<ul class="nav navbar-nav navbar-right" ng-show="me">
+			<li>
+				<img ng-src="{{me.avatarUrl}}" title="{{me.name}}" class="img-rounded">
+			</li>
+			<li>
+				<a href="" ng-click = "logout()">Log out</a>
+			</li>
+		</ul>
+	</nav>
+	<div class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="#">TechNode</a>
+			</div>
+		</div>
+	</div>
+	<div class="container" style="margin-top: 100px;">
+		<div class="row" ng-view></div>
+	</div>
+	<script type="text/javascript" src="/technode.js"></script>
+	<script type="text/javascript" src="/router.js"></script>
+	
+	<script type="text/javascript" src="/services/socket.js"></script>
+	<script type="text/javascript" src="/directives/auto-scroll-to-bottom.js"></script>
+	<script type="text/javascript" src="/directives/ctrl-enter-break-line.js"></script>
+	<script type="text/javascript" src="/controllers/room.js"></script>
+	<script type="text/javascript" src="/controllers/message-creator.js"></script>
+</body>
+</html>

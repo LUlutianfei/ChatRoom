@@ -1,0 +1,21 @@
+{
+  "name": "technode",
+  "description": "",
+  "main": "index.js",
+  "license": "ISC",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.0.0",
+    "angular": "^1.6.9",
+    "jQuery": "^3.3.1",
+    "angular-route": "^1.6.9"
+  }
+}
